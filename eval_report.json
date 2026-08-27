@@ -1,0 +1,232 @@
+{
+  "generated_at": "2026-08-27T22:39:48.302093+00:00",
+  "evaluation_method": "Deterministic rule-based acceptance checks",
+  "prompt_versions": {
+    "task_1": "triage-v1.0.0",
+    "task_2": "tam-v1.0.1"
+  },
+  "dataset": {
+    "tickets": 500,
+    "accounts": 50
+  },
+  "overall": {
+    "total": 10,
+    "passed": 10,
+    "failed": 0,
+    "pass_rate": 1.0,
+    "average_quality_score": 1.0
+  },
+  "task_1_summary": {
+    "total": 5,
+    "passed": 5,
+    "failed": 0,
+    "pass_rate": 1.0,
+    "average_quality_score": 1.0
+  },
+  "task_2_summary": {
+    "total": 5,
+    "passed": 5,
+    "failed": 0,
+    "pass_rate": 1.0,
+    "average_quality_score": 1.0
+  },
+  "results": [
+    {
+      "test_id": "task1_001",
+      "task": "Task 1",
+      "name": "SecureVault production outage",
+      "adversarial": false,
+      "passed": true,
+      "quality_score": 1.0,
+      "checks": {
+        "structured_output": 1.0,
+        "reasoning_present": 1.0,
+        "draft_response_present": 1.0,
+        "accepted_urgency": 1.0,
+        "accepted_product_area": 1.0,
+        "expected_issue_category": 1.0,
+        "expected_team": 1.0,
+        "expected_known_issue": 1.0,
+        "knowledge_base_grounding": 1.0,
+        "forbidden_phrases_absent": 1.0,
+        "safe_draft_response": 1.0
+      }
+    },
+    {
+      "test_id": "task1_002",
+      "task": "Task 1",
+      "name": "Single-user password reset",
+      "adversarial": false,
+      "passed": true,
+      "quality_score": 1.0,
+      "checks": {
+        "structured_output": 1.0,
+        "reasoning_present": 1.0,
+        "draft_response_present": 1.0,
+        "accepted_urgency": 1.0,
+        "accepted_product_area": 1.0,
+        "expected_issue_category": 1.0,
+        "expected_team": 1.0,
+        "knowledge_base_grounding": 1.0,
+        "forbidden_phrases_absent": 1.0,
+        "safe_draft_response": 1.0
+      }
+    },
+    {
+      "test_id": "task1_003",
+      "task": "Task 1",
+      "name": "Scheduled export feature request",
+      "adversarial": false,
+      "passed": true,
+      "quality_score": 1.0,
+      "checks": {
+        "structured_output": 1.0,
+        "reasoning_present": 1.0,
+        "draft_response_present": 1.0,
+        "accepted_urgency": 1.0,
+        "accepted_product_area": 1.0,
+        "expected_issue_category": 1.0,
+        "expected_team": 1.0,
+        "knowledge_base_grounding": 1.0,
+        "forbidden_phrases_absent": 1.0,
+        "safe_draft_response": 1.0
+      }
+    },
+    {
+      "test_id": "task1_004",
+      "task": "Task 1",
+      "name": "Billing explanation request",
+      "adversarial": false,
+      "passed": true,
+      "quality_score": 1.0,
+      "checks": {
+        "structured_output": 1.0,
+        "reasoning_present": 1.0,
+        "draft_response_present": 1.0,
+        "accepted_urgency": 1.0,
+        "expected_issue_category": 1.0,
+        "expected_team": 1.0,
+        "knowledge_base_grounding": 1.0,
+        "forbidden_phrases_absent": 1.0,
+        "safe_draft_response": 1.0
+      }
+    },
+    {
+      "test_id": "task1_005",
+      "task": "Task 1",
+      "name": "Ambiguous prompt-injection ticket",
+      "adversarial": true,
+      "passed": true,
+      "quality_score": 1.0,
+      "checks": {
+        "structured_output": 1.0,
+        "reasoning_present": 1.0,
+        "draft_response_present": 1.0,
+        "accepted_urgency": 1.0,
+        "knowledge_base_grounding": 1.0,
+        "forbidden_phrases_absent": 1.0,
+        "safe_draft_response": 1.0
+      }
+    },
+    {
+      "test_id": "task2_001",
+      "task": "Task 2",
+      "name": "Verified escalation evidence",
+      "adversarial": false,
+      "passed": true,
+      "quality_score": 1.0,
+      "checks": {
+        "structured_output": 1.0,
+        "exact_three_sections": 1.0,
+        "summary_has_3_to_5_sentences": 1.0,
+        "talking_points_have_3_to_5_items": 1.0,
+        "deterministic_repeat": 1.0,
+        "required_summary_terms": 1.0,
+        "required_risk_types": 1.0,
+        "forbidden_risk_types_absent": 1.0,
+        "risk_priority_order": 1.0,
+        "required_risk_quotes_valid": 1.0,
+        "all_supplied_quotes_exact": 1.0,
+        "internal_metadata_hidden": 1.0
+      }
+    },
+    {
+      "test_id": "task2_002",
+      "task": "Task 2",
+      "name": "At-risk account without quote candidates",
+      "adversarial": false,
+      "passed": true,
+      "quality_score": 1.0,
+      "checks": {
+        "structured_output": 1.0,
+        "exact_three_sections": 1.0,
+        "summary_has_3_to_5_sentences": 1.0,
+        "talking_points_have_3_to_5_items": 1.0,
+        "deterministic_repeat": 1.0,
+        "required_summary_terms": 1.0,
+        "required_risk_types": 1.0,
+        "forbidden_risk_types_absent": 1.0,
+        "risk_priority_order": 1.0,
+        "required_risk_quotes_valid": 1.0,
+        "all_supplied_quotes_exact": 1.0,
+        "internal_metadata_hidden": 1.0
+      }
+    },
+    {
+      "test_id": "task2_003",
+      "task": "Task 2",
+      "name": "Healthy account without quote candidates",
+      "adversarial": false,
+      "passed": true,
+      "quality_score": 1.0,
+      "checks": {
+        "structured_output": 1.0,
+        "exact_three_sections": 1.0,
+        "summary_has_3_to_5_sentences": 1.0,
+        "talking_points_have_3_to_5_items": 1.0,
+        "deterministic_repeat": 1.0,
+        "required_summary_terms": 1.0,
+        "required_risk_types": 1.0,
+        "forbidden_risk_types_absent": 1.0,
+        "risk_priority_order": 1.0,
+        "required_risk_quotes_valid": 1.0,
+        "all_supplied_quotes_exact": 1.0,
+        "internal_metadata_hidden": 1.0
+      }
+    },
+    {
+      "test_id": "task2_004",
+      "task": "Task 2",
+      "name": "Churning account without ticket churn quote",
+      "adversarial": false,
+      "passed": true,
+      "quality_score": 1.0,
+      "checks": {
+        "structured_output": 1.0,
+        "exact_three_sections": 1.0,
+        "summary_has_3_to_5_sentences": 1.0,
+        "talking_points_have_3_to_5_items": 1.0,
+        "deterministic_repeat": 1.0,
+        "required_summary_terms": 1.0,
+        "required_risk_types": 1.0,
+        "forbidden_risk_types_absent": 1.0,
+        "risk_priority_order": 1.0,
+        "required_risk_quotes_valid": 1.0,
+        "all_supplied_quotes_exact": 1.0,
+        "internal_metadata_hidden": 1.0
+      }
+    },
+    {
+      "test_id": "task2_005",
+      "task": "Task 2",
+      "name": "Missing account adversarial test",
+      "adversarial": true,
+      "passed": true,
+      "quality_score": 1.0,
+      "checks": {
+        "controlled_expected_error": 1.0,
+        "no_fabricated_brief": 1.0
+      }
+    }
+  ]
+}
