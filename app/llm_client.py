@@ -93,10 +93,24 @@ class GeminiStructuredClient:
                     temperature=self.settings.llm_temperature,
                     seed=seed,
                     candidate_count=1,
+
+                    # We use structured JSON, not function calling.
+                    automatic_function_calling=(
+                        types.AutomaticFunctionCallingConfig(
+                            disable=True
+                        )
+                    ),
+
                     response_mime_type="application/json",
                     response_schema=response_model,
                 ),
             )
+
+        except Exception as error:
+            raise LLMRequestError(
+                "The Gemini API request failed with "
+                f"{type(error).__name__}."
+            ) from error
 
         except Exception as error:
             raise LLMRequestError(
