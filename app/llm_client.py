@@ -90,11 +90,14 @@ class GeminiStructuredClient:
                 contents=user_prompt,
                 config=types.GenerateContentConfig(
                     system_instruction=system_prompt,
-                    temperature=self.settings.llm_temperature,
+                    temperature=(
+                        self.settings.llm_temperature
+                    ),
                     seed=seed,
                     candidate_count=1,
 
-                    # We use structured JSON, not function calling.
+                    # We use structured JSON,
+                    # not automatic function calling.
                     automatic_function_calling=(
                         types.AutomaticFunctionCallingConfig(
                             disable=True
@@ -102,15 +105,14 @@ class GeminiStructuredClient:
                     ),
 
                     response_mime_type="application/json",
-                    response_schema=response_model,
+
+                    # Convert the requested Pydantic model
+                    # into standard JSON Schema.
+                    response_json_schema=(
+                        response_model.model_json_schema()
+                    ),
                 ),
             )
-
-        except Exception as error:
-            raise LLMRequestError(
-                "The Gemini API request failed with "
-                f"{type(error).__name__}."
-            ) from error
 
         except Exception as error:
             raise LLMRequestError(
