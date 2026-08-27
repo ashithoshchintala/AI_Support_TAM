@@ -1,0 +1,10 @@
+google-genai
+pydantic
+pydantic-settings
+python-dotenv
+scikit-learn
+fastapi
+uvicorn[standard]
+streamlit
+pytest
+httpx
