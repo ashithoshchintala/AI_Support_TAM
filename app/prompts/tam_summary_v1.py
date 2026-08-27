@@ -6,7 +6,7 @@ from typing import Any
 
 
 # Permanent version identifier for the Task 2 prompt.
-TAM_PROMPT_VERSION = "tam-v1.0.0"
+TAM_PROMPT_VERSION = "tam-v1.0.1"
 
 
 TAM_SYSTEM_PROMPT = f"""
@@ -153,8 +153,19 @@ def build_tam_user_prompt(
             + ", ".join(sorted(missing_fields))
         )
 
+    # Keep repository diagnostics inside Python.
+    # They are not useful model input or TAM-facing information.
+    model_visible_context = {
+        key: value
+        for key, value in tam_context.items()
+        if key not in {
+            "match_method",
+            "data_quality_warnings",
+        }
+    }
+
     context_json = json.dumps(
-        tam_context,
+        model_visible_context,
         indent=2,
         ensure_ascii=False,
         sort_keys=False,

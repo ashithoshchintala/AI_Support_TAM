@@ -4,6 +4,16 @@ This file records changes to production prompts so evaluation results
 can be traced to the exact prompt behaviour.
 
 ## triage-v1.0.0 — 2026-08-27
+
+## tam-v1.0.1 — 2026-08-27
+
+Task 2 privacy and output-quality patch.
+
+- Removed internal account-ticket join metadata from the model-visible
+  prompt context.
+- Preserved join warnings internally for diagnostics and evaluation.
+- Prevented implementation details such as company-name fallback from
+  appearing in TAM-facing summaries.
 ## tam-v1.0.0 — 2026-08-27
 
 Initial Task 2 TAM account-health prompt.
