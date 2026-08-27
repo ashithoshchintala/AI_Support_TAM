@@ -173,8 +173,8 @@ class RiskFlag(StrictBaseModel):
     risk_type: RiskType
     description: str = Field(min_length=1)
 
-    ticket_id: str | None = None
-    direct_quote: str | None = None
+    ticket_id: str | None
+    direct_quote: str | None
 
     @model_validator(mode="after")
     def require_evidence_for_important_risks(self) -> Self:
@@ -215,3 +215,4 @@ class AccountBrief(StrictBaseModel):
     recommended_talking_points: list[str] = Field(
         min_length=1,
     )
+    
