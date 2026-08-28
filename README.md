@@ -272,4 +272,4 @@ The rule-based evaluation system is reproducible and inexpensive, but it cannot 
 
 ## Video demonstration
 
-Loom walkthrough: **ADD_LOOM_URL_HERE**
+Loom walkthrough: https://drive.google.com/file/d/1PiUvI9Jg0Ss-wCGiLYceR4Ou3wyMtBL-/view?usp=sharing
